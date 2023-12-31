@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello Kitty</title>
+  <style>
+
+    * {
+        position: absolute;
+    }
+
+    .container {
+        width: 100%;
+        height: 100vh;
+        margin-left: 10px;
+    }
+
+    .kitty {
+        width: 100vw;
+        height: 100vh;
+        margin-left: 35rem;
+        margin-top: 10rem;
+    }
+
+    .ear-1-1, .ear-2-1 {
+        border-radius: 85% 23% 85% 15% / 67% 87% 13% 33%;
+        height: 100px;
+        width: 100px;
+        rotate: -60deg;
+        order: 2;
+        top: 100px;
+    }
+
+    .ear-1-1 {
+        left: 100px;
+    }
+
+    .ear-2-1 {
+        border-radius: 85% 15% 85% 23% / 13% 33% 67% 87%;
+        rotate: 340deg;
+        left: 410px;
+    }
+
+    .head {
+        border-radius: 86% 87% 91% 90% / 100% 100% 100% 100%;
+        height: 300px;
+        width: 400px;
+        left: 113px;
+        top: 111px;
+    }
+
+    .whisker-l-1 {
+        background-color: black;
+        border-width: 15px 0px 0px 0px;
+        border-radius: 49% 52% 52% 49% / 45% 48% 60% 52%;
+        height: 2px;
+        width: 50px;
+        rotate: 3deg;
+        order: 2;
+        top: 275px;
+        left: 105px;
+    }
+
+    .whisker-l-1-2, .whisker-l-3-2 {
+        background-color: black;
+        border-width: 15px 0px 0px 0px;
+        border-radius: 48% 52% 43% 57% / 73% 0% 100% 25%;
+        height: 1px;
+        width: 80px;
+        rotate: -5deg;
+        order: 2;
+        top: 278px;
+        left: 55px;
+    }
+
+    .whisker-l-3-2 {
+        left: 150px;
+        top: 367px;
+        rotate: 167deg;
+        width: 55px;
+        height: 1px;
+    }
+
+    .whisker-l-2 {
+        background-color: black;
+        border-width: 15px 0px 0px 0px;
+        border-radius: 49% 52% 52% 49% / 45% 48% 60% 52%;
+        height: 2px;
+        width: 80px;
+        rotate: -12deg;
+        order: 2;
+        top: 330px;
+        left: 85px;
+    }
+
+    .whisker-l-3 {
+        background-color: black;
+        border-width: 15px 0px 0px 0px;
+        border-radius: 49% 52% 52% 49% / 45% 48% 60% 52%;
+        height: 2px;
+        width: 95px;
+        rotate: -32deg;
+        order: 2;
+        top: 385px;
+        left: 95px;
+    }
+
+    .whisker-r-1 {
+        background-color: black;
+        border-width: 15px 0px 0px 0px;
+        border-radius: 49% 52% 52% 49% / 45% 48% 60% 52%;
+        height: 1px;
+        width: 40px;
+        rotate: -9deg;
+        order: 2;
+        top: 275px;
+        left: 500px;
+    }
+
+    .whisker-r-1-2, .whisker-r-3-2 {
+        background-color: black;
+        border-width: 15px 0px 0px 0px;
+        border-radius: 48% 52% 43% 57% / 73% 0% 100% 25%;
+        height: 1px;
+        width: 80px;
+        rotate: -179deg;
+        order: 2;
+        top: 273px;
+        left: 520px;
+    }
+
+    .whisker-r-3-2 {
+        left: 482px;
+        top: 353px;
+        rotate: 9deg;
+        width: 35px;
+        height: 1px;
+    }
+
+    .whisker-r-2 {
+        background-color: black;
+        border-width: 15px 0px 0px 0px;
+        border-radius: 49% 52% 52% 49% / 45% 48% 60% 52%;
+        height: 2px;
+        width: 80px;
+        rotate: 6deg;
+        order: 2;
+        top: 320px;
+        left: 500px;
+    }
+
+    .whisker-r-3 {
+        background-color: black;
+        border-width: 15px 0px 0px 0px;
+        border-radius: 49% 52% 52% 49% / 45% 48% 60% 52%;
+        height: 2px;
+        width: 95px;
+        rotate: 19deg;
+        order: 2;
+        top: 363px;
+        left: 485px;
+    }
+
+    .left-eye {
+
+        background-color: black;
+        border-width: 15px 0px 0px 0px;
+        border-radius: 93% 78% 82% 100% / 72% 94% 77% 76%;
+        height: 25px;
+        width: 30px;
+        rotate: 0deg;
+        order: 2;
+        top: 283px;
+        left: 200px;
+    }
+
+    .right-eye {
+        background-color: black;
+        border-width: 15px 0px 0px 0px;
+        border-radius: 93% 78% 82% 100% / 72% 94% 77% 76%;
+        height: 25px;
+        width: 30px;
+        rotate: 180deg;
+        order: 2;
+        top: 283px;
+        left: 420px;
+    }
+
+    .nose {
+        border-width: 10px;
+        border-radius: 100% 100% 100% 100% / 95% 97% 95% 95%;
+        height: 12px;
+        width: 22px;
+        rotate: 180deg;
+        order: 2;
+        top: 320px;
+        left: 300px;
+    }
+
+    .eraser-1 {
+        width: 100px;
+        height: 95px;
+        border: 1px solid white;
+        top: 136px;
+        left: 150px;
+        rotate: 29deg;
+        border-radius: 20%;
+    }
+
+
+    .eraser-2 {
+        width: 85px;
+        height: 25px;
+        border: 1px solid white;
+        top: 151px;
+        left: 419px;
+        rotate: 39deg;
+    }
+
+    .bow {
+        width: 50px;
+        height: 50px;
+        border: 12px solid black;
+        border-radius: 50%;
+        top: 135px;
+        left: 425px;
+        order: 5;
+    }
+
+    .tie-1 {
+        width: 70px;
+        height: 100px;
+        border: 12px solid black;
+        border-radius: 55% 100% 100% 64% / 67% 69% 79% 68%;
+        top: 75px;
+        left: 365px;
+        rotate: 30deg;
+    }
+
+    .tie-2 {
+        width: 60px;
+        height: 85px;
+        border: 12px solid black;
+        border-radius: 55% 100% 100% 64% / 67% 69% 79% 68%;
+        top: 140px;
+        left: 460px;
+        rotate: 215deg;
+    }
+
+    .semi-circle-1 {
+        width: 20px;
+        height: 20px;
+        border: 10px solid black;
+        border-radius: 50%;
+        top: 175px;
+        left: 470px;
+    }
+
+    .semi-circle-2 {
+        width: 20px;
+        height: 20px;
+        border: 10px solid black;
+        border-radius: 50%  ;
+        top: 130px;
+        left: 411px;        
+    }
+
+    .ear-lobe-1 {
+        width: 1px;
+        height: 10px;
+        background-color: black;
+        border: 6px solid black;
+        border-radius: 50%;
+        left: 130px;
+        top: 187px;
+        rotate: 30deg;
+        border-width: 9px;
+        border-radius: 100% 100% 100% 100% / 100% 100% 100% 100%;
+    }
+
+    /* Shared property values */
+    .ear-1-1, .ear-2-1, .head, .nose, .eraser-1,
+    .eraser-2, .bow, .tie-1, .tie-2, .semi-circle-1, .semi-circle-2  {
+        background-color: white;
+    }
+
+    .ear-1-1, .ear-2-1, .head {
+        border-width: 15px;
+    }
+
+    .ear-1-1, .ear-2-1, .head, .whisker-l-1, .whisker-l-1-2, .whisker-l-3-2,
+         .whisker-l-2, .whisker-l-3, .whisker-r-1, .whisker-r-1-2, .whisker-r-3-2,
+         .whisker-r-2, .whisker-r-3, .left-eye, .right-eye, .nose, .ear-lobe-1 {
+        border-style: solid;
+    }
+
+    .container > div,.bow-tie > div, .whiskers > div, .eyes > div, .head, .ear-lobe-1 {
+        border-color: black;
+    }
+
+    .eyes > *, .ear-lobe-1, .whiskers > * {
+        background-color: black;
+    }
+
+    div.eraser-1, div.eraser-2 {
+        border-color: white;
+    }
+    
+  </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="kitty">
+            <div class="ear-1-1"></div>    
+            <div class="ear-2-1"></div>    
+            <div class="head"></div>  
+            <div class="eraser-1"></div>
+            <div class="eraser-2"></div>
+            <div class="ear-lobe-1"></div>
+
+            <div class="bow-tie">        
+                <div class="tie-1"></div>
+                <div class="tie-2"></div>
+                <div class="semi-circle-1"></div>
+                <div class="semi-circle-2"></div>
+                <div class="bow"></div>
+            </div>
+
+            <div class="whiskers">
+                <div class="whisker-l-1"></div>
+                <div class="whisker-l-1-2"></div>
+                <div class="whisker-l-2"></div>  
+                <div class="whisker-l-3"></div> 
+                <div class="whisker-l-3-2"></div>
+                <div class="whisker-r-1"></div>  
+                <div class="whisker-r-2"></div>  
+                <div class="whisker-r-3"></div>  
+                <div class="whisker-r-1-2"></div>  
+                <div class="whisker-r-3-2"></div>  
+            </div>
+
+            <div class="eyes">
+                <div class="left-eye"></div>
+                <div class="right-eye"></div>
+            </div>
+
+            <div class="nose"></div>
+        </div>
+    </div>
+
+</body>
+</html>
